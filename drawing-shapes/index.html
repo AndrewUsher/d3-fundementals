@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>D3 Fundementals</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+</head>
+
+<body>
+  <!-- Start: SVG Bar -->
+  <h3>SVG Bar</h3>
+  <svg>
+    <rect width="50" height="100" style="fill: blueviolet">
+  </svg>
+  <!-- End: SVG Bar -->
+
+  <!-- Start: D3 Bar -->
+  <h3>D3 Bar</h3>
+  <div id="d3-bar"></div>
+  <!-- End: D3 Bar -->
+
+  <!-- Start: SVG Circle -->
+  <h3>SVG Circle</h3>
+  <svg width="50" height="50">
+    <circle cx="25" cy="25" r="20"></circle>
+  </svg>
+  <!-- End: SVG Circle -->
+
+  <!-- Start: D3 Circle -->
+  <h3>D3 Circle</h3>
+  <div id="d3-circle"></div>
+
+  <!-- End: D3 Circle -->
+
+  <!-- Start: SVG Text -->
+  <h3>SVG Text</h3>
+  <svg width="250" height="50">
+    <text x="0" y="25">
+      Easy Peasy
+    </text>
+  </svg>
+  <!-- End: SVG Text -->
+
+  <!-- Start: D3 Text -->
+  <h3>D3 Text</h3>
+  <div id="d3-text"></div>
+  <!-- End: D3 Text -->
+
+  <script>
+    // D3 Bar
+    d3.select('#d3-bar')
+      .append('svg')
+      .append('rect')
+      .attr('width', 50)
+      .attr('height', 100)
+      .style('fill', 'blue')
+
+    // D3 Circle
+    d3.select('#d3-circle')
+      .append('svg')
+      .attr('width', 50)
+      .attr('height', 50)
+      .append('circle')
+      .attr('cx', 25)
+      .attr('cy', 25)
+      .attr('r', 20)
+
+    // D3 Text
+    d3.select('#d3-text')
+      .append('svg')
+      .attr('width', 250)
+      .attr('height', 50)
+      .append('text')
+      .text('Easy peasy')
+      .attr('x', 0)
+      .attr('y', 25)
+
+  </script>
+</body>
+
+</html>
